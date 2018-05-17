@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Theme Renders a CUSTOM theme 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo-elem.svg"
+    />
+    <h1
+      className="App-title"
+    >
+      Welcome to Elem
+    </h1>
+  </header>
+  <p
+    className="App-intro"
+  >
+    <button
+      style={
+        Object {
+          "color": "pink",
+        }
+      }
+    >
+      hola Vespa!
+      ,
+    </button>
+  </p>
+</div>
+`;
+
+exports[`Theme Renders a default theme, without any customization 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo-elem.svg"
+    />
+    <h1
+      className="App-title"
+    >
+      Welcome to Elem
+    </h1>
+  </header>
+  <p
+    className="App-intro"
+  >
+    <button
+      style={
+        Object {
+          "color": "#1b3b31",
+        }
+      }
+    >
+      hola Vespa!
+      ,
+    </button>
+  </p>
+</div>
+`;
+
+exports[`renders a snapshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo-elem.svg"
+    />
+    <h1
+      className="App-title"
+    >
+      Welcome to Elem
+    </h1>
+  </header>
+  <p
+    className="App-intro"
+  >
+    <button
+      style={
+        Object {
+          "color": "#1b3b31",
+        }
+      }
+    >
+      hola Vespa!
+      ,
+    </button>
+  </p>
+</div>
+`;
