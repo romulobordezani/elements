@@ -3,7 +3,18 @@
   "plugins": ["jest"],
   "rules": {
     "no-underscore-dangle": 0,
-    "arrow-body-style": 0
+    "arrow-body-style": 0,
+    "spaced-comment": ["error", "always", {
+      "line": {
+        "markers": ["/"],
+        "exceptions": ["-", "+"]
+      },
+      "block": {
+        "markers": ["!"],
+        "exceptions": ["*"],
+        "balanced": true
+      }
+    }]
   },
   "env": {
     "jest/globals": true
