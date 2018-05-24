@@ -1,40 +1,43 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ThemeProvider from './index';
+import ThemeContext from './index';
 import Theme from '../../core/Theme';
-import App from '../../runners/App';
-jest.mock('react-dom');
+import Button from '../../elements/Button';
 
-const theme = new Theme();
+const theme = {
+  theme: new Theme(),
+};
 
 describe('Theme', () => {
 
   it('Renders a default theme, without any customization', () => {
     const tree = renderer.create(
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
+      <ThemeContext.Provider value={theme}>
+        <Button>Button</Button>
+      </ThemeContext.Provider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('Renders a CUSTOM theme, with new colors customized', () => {
 
-    const customTheme = new Theme({
-      palette: {
-        primary: {
-          dark: 'pink',
+    const customTheme = {
+      theme: new Theme({
+        palette: {
+          primary: {
+            dark: 'pink',
+          },
+          secondary: {
+            light: 'blue',
+          },
         },
-        secondary: {
-          light: 'blue',
-        },
-      },
-    });
+      }),
+    };
 
     const tree = renderer.create(
-      <ThemeProvider theme={customTheme}>
-        <App />
-      </ThemeProvider>
+      <ThemeContext.Provider value={customTheme}>
+        <Button>Button</Button>
+      </ThemeContext.Provider>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

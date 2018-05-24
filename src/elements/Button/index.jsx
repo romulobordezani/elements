@@ -1,21 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Theme from '../../core/Theme/index';
+import ThemeContext from '../../providers/ThemeProvider';
 
-const Button = function Button(props, context) {
+function Button(props) {
   return (
-    <button style={{ color: context.theme.palette.primary.dark }}>
-      {props.content},
-    </button>
+    <ThemeContext.Consumer>
+      {({ theme }) => (
+        <button
+          style={{
+            backgroundColor: theme.colors.dark.A100,
+            color: theme.colors.dark.A700,
+          }}
+        >
+          {props.children}
+        </button>
+      )}
+    </ThemeContext.Consumer>
   );
-};
+}
 
 Button.propTypes = {
-  content: PropTypes.string.isRequired,
-};
-
-Button.contextTypes = {
-  theme: PropTypes.instanceOf(Theme).isRequired,
+  children: PropTypes.string.isRequired,
 };
 
 export default Button;
