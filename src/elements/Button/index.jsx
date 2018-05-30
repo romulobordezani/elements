@@ -1,26 +1,28 @@
 import React from 'react';
+import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../providers/ThemeProvider';
 
-function Button(props) {
+import Theme from '../../core/Theme';
+import { withTheme } from '../../providers/ThemeProvider';
+
+const styles = {
+  myButton: {
+    color: 'green',
+  },
+};
+
+function Button({ theme, classes, ...props }) {
   return (
-    <ThemeContext.Consumer>
-      {({ theme }) => (
-        <button
-          style={{
-            backgroundColor: theme.colors.dark.A100,
-            color: theme.colors.dark.A700,
-          }}
-        >
-          {props.children}
-        </button>
-      )}
-    </ThemeContext.Consumer>
+    <button className="{classes.myButton}" >{props.children}</button>
   );
 }
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
+  theme: PropTypes.instanceOf(Theme).isRequired,
+  classes: PropTypes.any.isRequired,
 };
 
-export default Button;
+const StyledButton = injectSheet(styles)(Button);
+
+export default withTheme(StyledButton);

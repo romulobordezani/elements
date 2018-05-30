@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../../providers/ThemeProvider/index';
+import { ThemeContext } from '../../../providers/ThemeProvider/index';
 
 function ThemeChangerButton(props) {
   return (

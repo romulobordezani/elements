@@ -2,8 +2,9 @@
 import React from 'react';
 import Theme from '../core/Theme';
 
-import ThemeContext from '../providers/ThemeProvider';
+import { ThemeContext } from '../providers/ThemeProvider';
 import CssBaseline from '../providers/CssBaseline';
+import Typography from '../providers/Typography';
 
 import ThemeChanger from './components/ThemeChanger';
 import ViewerHeader from './components/ViewerHeader';
@@ -37,13 +38,15 @@ class Viewer extends React.Component {
   render() {
     return (
       <CssBaseline>
-        <ThemeContext.Provider value={this.state}>
-          <div className="Viewer">
-            <ViewerHeader />
-            <ViewerSideBar />
-            <ViewerContainer />
-          </div>
-        </ThemeContext.Provider>
+        <Typography>
+          <ThemeContext.Provider value={this.state}>
+            <div className="Viewer">
+              <ViewerHeader />
+              <ViewerSideBar />
+              <ViewerContainer />
+            </div>
+          </ThemeContext.Provider>
+        </Typography>
       </CssBaseline>);
   }
 }
