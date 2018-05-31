@@ -1,28 +1,26 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
+import { withTheme, Theme } from '../../providers/ThemeProvider';
+import './Button.scss';
 
-import Theme from '../../core/Theme';
-import { withTheme } from '../../providers/ThemeProvider';
-
-const styles = {
-  myButton: {
-    color: 'green',
+const styleOveride = {
+  eButton: {
+    backgroundColor: props => props.theme.palette.primary.light,
+    color: props => props.theme.palette.primary.dark,
   },
 };
 
 function Button({ theme, classes, ...props }) {
   return (
-    <button className="{classes.myButton}" >{props.children}</button>
+    <button className={`eButton ${classes.eButton}`} >{props.children}</button>
   );
 }
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
   theme: PropTypes.instanceOf(Theme).isRequired,
-  classes: PropTypes.any.isRequired,
+  classes: PropTypes.shape({}).isRequired,
 };
 
-const StyledButton = injectSheet(styles)(Button);
-
-export default withTheme(StyledButton);
+export default withTheme(injectSheet(styleOveride)(Button));

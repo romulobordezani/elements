@@ -1,5 +1,6 @@
 // Reference > https://reactjs.org/docs/context.html
 import React from 'react';
+import Theme from '../../core/Theme';
 
 const ThemeContext = React.createContext({
   theme: {},
@@ -16,4 +17,4 @@ function withTheme(Component) {
   };
 }
 
-export { ThemeContext, withTheme };
+export { ThemeContext, withTheme, Theme };
