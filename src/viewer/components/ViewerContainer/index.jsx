@@ -1,5 +1,5 @@
 import React from 'react';
-import './ViewerContainer.scss';
+import './ViewerContainer.css';
 import Button from '../../../elements/Button';
 
 function ViewerContainer() {

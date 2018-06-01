@@ -13,7 +13,9 @@ const styleOveride = {
 
 function Button({ theme, classes, ...props }) {
   return (
-    <button className={`eButton ${classes.eButton}`} >{props.children}</button>
+    <button className={`eButton ${classes.eButton}`} >
+      {props.children}
+    </button>
   );
 }
 

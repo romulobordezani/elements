@@ -1,14 +1,13 @@
 'use strict';
 
 let sass = require('node-sass');
-let glob = require('glob-fs')({ gitignore: true });
 let fs = require('fs');
 let chokidar = require('chokidar');
 
-function compileSass(file) {
+function compileSass(filePath) {
   sass.render(
     {
-      file: file.path,
+      file: filePath,
       outputStyle: 'compressed',
     },
 
@@ -19,35 +18,30 @@ function compileSass(file) {
         return;
       }
 
-      let compiledCssFile = file.dirname + '/' + file.name + '.css';
+      let compiledCssFile = filePath.replace(/.scss/g, '.css');
 
       fs.writeFile(compiledCssFile, result.css.toString(), function (err) {
         if (err) {
           console.error(err);
         }
-        console.log(file.name + '.scss file has been transformed successfully');
+        console.log(filePath + '.css generated.');
       });
   });
 }
 
-glob.readdirStream('**/*.scss')
-  .on('data', function (file) {
-    compileSass(file);
-  })
-  .on('error', console.error)
-  .on('end', function () {
-    addWatcher();
-  });
-
 function addWatcher(){
 
-  let watcher = chokidar.watch('./src', {ignored: /\.(js|jsx|mjs|snap|css|png|jpg|jpeg|gif|svg)$/, persistent: true});
+  let watcher = chokidar.watch('./src/**/*.scss', {persistent: true});
 
   watcher
-    .on('add', function(path) {console.log('File', path, 'has been added');})
-    .on('change', function(path) {console.log('File', path, 'has been changed');})
+    .on('add', function(path) {
+      compileSass(path);
+    })
+    .on('change', function(path) {
+      compileSass(path);
+    })
     .on('unlink', function(path) {console.log('File', path, 'has been removed');})
     .on('error', function(error) {console.error('Error happened', error);});
 }
 
-
+module.exports = addWatcher;

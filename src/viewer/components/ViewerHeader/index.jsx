@@ -2,7 +2,7 @@ import React from 'react';
 import ThemeChangerContainer from '../ThemeChanger/ThemeChangerContainer';
 import logo from './images/logo-elem.svg';
 import { ThemeContext } from '../../../providers/ThemeProvider';
-import './ViewerHeader.scss';
+import './ViewerHeader.css';
 
 function ViewerHeader() {
   return (

@@ -1,1 +1,0 @@
-export default 'body{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}h1{font-size:2.4em;line-height:1.11111;margin-bottom:.25em;font-weight:bold;color:#202020}h2{font-size:1.6em;line-height:1.16667;margin-bottom:.375em;color:#202020}h3{font-size:1.33333em;line-height:1.1;margin-bottom:.375em}p{font-size:1em;line-height:1.33333;margin-bottom:.66667em}'
