@@ -2,7 +2,7 @@ import React from 'react';
 import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
 import { withTheme, Theme } from '../../providers/ThemeProvider';
-import './Button.scss';
+import './Button.css';
 
 const styleOveride = {
   eButton: {

@@ -1,0 +1,1 @@
+export default '.viewer-container{background:#FFFFFF;height:100%;width:70%;margin:0 1%;display:inline-block;float:left;padding:120px 2% 320px;z-index:800;position:absolute;right:0}a.anchor{padding-top:120px;margin-top:-120px;display:inline-block;outline:none}'
