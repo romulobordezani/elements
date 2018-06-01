@@ -1,11 +1,4 @@
-import Button from './elements/Button';
-import ThemeContext from './providers/ThemeProvider';
-import CssBaseline from './providers/CssBaseline';
-import DefaultColors from './core/Colors';
-
-module.exports = {
-  Button: Button,
-  ThemeContext: ThemeContext,
-  CssBaseline: CssBaseline,
-  DefaultColors: DefaultColors,
-}
+export { Button } from './elements/Button';
+export { ThemeContext }from './providers/ThemeProvider';
+export { CssBaseline } from './providers/CssBaseline';
+export { DefaultColors } from './core/Colors';
