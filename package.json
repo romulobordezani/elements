@@ -75,7 +75,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "./node_modules/.bin/babel src -d build --copy-files --presets=es2015,react",
+    "build": "./node_modules/.bin/babel src -d build --copy-files --presets=react",
     "test": "node scripts/test.js --env=jsdom",
     "prepare": "yarn run build"
   },
