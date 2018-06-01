@@ -74,7 +74,7 @@
     "start": "node scripts/start.js",
     "build": "babel src -d build --copy-files",
     "test": "node scripts/test.js --env=jsdom",
-    "prepare": "npm run build"
+    "prepare": "yarn run build"
   },
   "author": "dftech",
   "license": "SEE LICENSE IN license.md",
