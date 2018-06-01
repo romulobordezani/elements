@@ -7,7 +7,7 @@ function ThemeChangerButton(props) {
     <ThemeContext.Consumer>
       {({ theme, changeTheme }) => (
         <button
-          className="theme-changer__item"
+          className={`theme-changer__item ${theme.currentTheme === props.themeName ? 'theme-changer__item_state_selected' : ''}`}
           style={{ backgroundColor: theme.currentTheme === props.themeName || theme.currentTheme === 'default' ? theme.palette.secondary.light : '#FFF' }}
           onClick={() => changeTheme(props.themeName)}
         >

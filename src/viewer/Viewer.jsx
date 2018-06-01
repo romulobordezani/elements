@@ -14,7 +14,7 @@ import ViewerContainer from './components/ViewerContainer';
 const customTheme = new Theme({
   palette: {
     secondary: {
-      light: 'gold',
+      light: 'white',
     },
   },
 });
@@ -37,17 +37,17 @@ class Viewer extends React.Component {
 
   render() {
     return (
-      <CssBaseline>
-        <Typography>
-          <ThemeContext.Provider value={this.state}>
+      <ThemeContext.Provider value={this.state}>
+        <CssBaseline>
+          <Typography>
             <div className="Viewer">
               <ViewerHeader />
               <ViewerSideBar />
               <ViewerContainer />
             </div>
-          </ThemeContext.Provider>
-        </Typography>
-      </CssBaseline>);
+          </Typography>
+        </CssBaseline>
+      </ThemeContext.Provider>);
   }
 }
 

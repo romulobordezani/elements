@@ -2,18 +2,18 @@ import React from 'react';
 import './ViewerContainer.css';
 import Button from '../../../elements/Button';
 
+const ReactMarkdown = require('react-markdown');
+
+const getStarted = require('./mds/getStarted.md');
+
+
 function ViewerContainer() {
   return (
     <div className="viewer-container">
       <h1><a href="true" className="anchor" id="get_started">Get Started</a></h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Fusce a ex sit amet quam congue rutrum a ut nunc.
-        Etiam quam nisi, pharetra quis nibh non, facilisis maximus ipsum.
-        Praesent feugiat bibendum viverra.
-        Sed justo diam, viverra at enim non, interdum lobortis dolor.
-        Mauris eget ante eget ipsum vulputate efficitur.
-      </p>
+
+      <ReactMarkdown source={getStarted} />
+
 
       <h1><a href="true" className="anchor" id="get_envolved">Get Envolved</a></h1>
       <p>

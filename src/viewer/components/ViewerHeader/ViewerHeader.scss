@@ -20,7 +20,7 @@
 
     &__logo{
 
-      animation: Viewer-logo-spin infinite 20s linear;
+      animation: Viewer-logo-spin infinite 5s linear;
       float: left;
 
       &_size_small{
@@ -30,10 +30,12 @@
     }
 
     &__title {
-      font-size: 1.5em;
-      line-height: 60px;
       float: left;
-      margin-left: 15px;
+      margin: 15px 0 0 15px;
+      img{
+        max-width: 200px;
+        height: auto;
+      }
     }
 
   }

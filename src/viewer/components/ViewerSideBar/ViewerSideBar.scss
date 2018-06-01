@@ -1,4 +1,5 @@
 .side-bar{
+
   width: 20%;
   background-color: #ececec;
   height: 100%;
@@ -10,4 +11,19 @@
   -webkit-box-shadow: 1px 5px 5px 0px rgba(00,00,00,0.3);
   box-shadow: 1px 5px 5px 0px rgba(00,00,00,0.3);
   float: left;
+
+  ul{
+    padding: 0 0 0 20px;
+    li{
+      margin: 20px;
+      list-style: none;
+
+      > ul{
+        padding: 0;
+      }
+
+    }
+
+  }
+
 }

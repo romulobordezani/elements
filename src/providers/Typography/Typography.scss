@@ -6,11 +6,11 @@ $base__font-size: 15 !default;
 }
 
 body{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 h1 {
-  font-size: calc-em(36);
+  font-size: calc-em(26);
   line-height: (40/36);
   margin-bottom: calc-em(10, 40);
   font-weight: bold;
@@ -18,14 +18,14 @@ h1 {
 }
 
 h2 {
-  font-size: calc-em(24);
+  font-size: calc-em(20);
   line-height: (28/24);
   margin-bottom: calc-em(15, 40);
   color: $color__primary;
 }
 
 h3 {
-  font-size: calc-em(20);
+  font-size: calc-em(18);
   line-height: (22/20);
   margin-bottom: calc-em(15, 40);
 }
@@ -34,4 +34,22 @@ p {
   font-size: calc-em(15);
   line-height: (20/15);
   margin-bottom: calc-em(10, 15);
+}
+
+a{
+
+  color: #333333;
+  text-decoration: none;
+  transition: color .2s;
+  font-weight: normal;
+
+  &:hover{
+    color: #999999;
+  }
+
+  &:active, &:focus {
+    color: #111111;
+    text-decoration: underline;
+  }
+
 }

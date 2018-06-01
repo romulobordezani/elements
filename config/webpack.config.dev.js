@@ -236,6 +236,10 @@ module.exports = {
             ],
           },
           {
+            test: /\.md$/,
+            use: 'raw-loader',
+          },
+          {
             // Exclude `js` files to keep "css" loader working as it injects
             // its runtime that would otherwise processed through "file" loader.
             // Also exclude `html` and `json` extensions so they get processed

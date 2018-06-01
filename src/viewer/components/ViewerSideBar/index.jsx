@@ -8,7 +8,7 @@ function ViewerSideBar() {
         <li><a href="#get_started">Get Started</a></li>
         <li><a href="#get_envolved">Get Envolved</a></li>
         <li>
-          Componentes
+          <a href="#components">Componentes</a>
           <ul>
             <li><a href="#button">Button</a></li>
             <li><a href="#input">Input</a></li>
