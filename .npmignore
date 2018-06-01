@@ -1,2 +1,8 @@
 .babelrc
 /src
+.editorconfig
+CODE_OF_CONDUCT.md
+/scripts
+/config
+/public
+license.md
