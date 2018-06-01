@@ -75,7 +75,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "babel src -d build --copy-files",
+    "build": "./node_modules/.bin/babel src -d build --copy-files",
     "test": "node scripts/test.js --env=jsdom",
     "prepare": "yarn run build"
   },
