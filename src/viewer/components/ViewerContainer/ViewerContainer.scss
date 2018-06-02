@@ -15,6 +15,10 @@
     max-width: 400px;
   }
 
+  img[src$='#atomic-design'] {
+    max-width: 600px;
+  }
+
   a.anchor { /* Hack to fix the fixed header extra space on top when anchoring */
     padding-top: 120px;
     margin-top: -120px;
@@ -23,7 +27,7 @@
   }
 
   .md-card{
-    margin: 28px 0;
+    margin: 10px 0 28px;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
     padding: 20px;
   }

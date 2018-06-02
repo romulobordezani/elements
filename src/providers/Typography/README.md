@@ -1,4 +1,4 @@
-Typography is an HOC integrated with the Theme, provides all styles needed to format texts in it's children dom elements
+Typography is an High Order Component responsible for text handling integrated with Theme, provides all styles needed to format texts in it's children dom elements
 
 #### Properties
 

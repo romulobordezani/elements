@@ -1,44 +1,81 @@
-![alt text](https://d21buns5ku92am.cloudfront.net/59997/images/186068-Bildschirmfoto%202015-11-05%20um%2018.08.38-87e3ab-large-1446743872.png#dfg-logo)
+![GFG](https://d21buns5ku92am.cloudfront.net/59997/images/186068-Bildschirmfoto%202015-11-05%20um%2018.08.38-87e3ab-large-1446743872.png#dfg-logo)
 
 
 Elem is part of **Global Fashion Group** design system, home of react reusable elements among different themes.
 
-#### Installing while a private npm server isn't available
+As an Atomic Design adopter, our design system is using the following scheme to split components:
+
+![Atomic Design](https://www.thumb321.com.br/img-e07e14467e784b80#atomic-design)
+
+<blockquote>
+ <strong>Elem</strong> is only in charge of Atoms, also called elements. All others components should be composed outside of Elem.
+</blockquote>
+
+* * *
+
+### Using Elem
+Installing while a private npm server isn't available
 ```bash
 npm install --save git+ssh://@bitbucket.org:dafiti/store-front-ui.git#GFG-29199
 ```
 
-## HTML support
-<blockquote>
-  I'm an html blockquote, dude!
-</blockquote>
 
-## How about some code?
+### On your app
 ```js
-var React = require('react');
-var Markdown = require('react-markdown');
+import React, { Component } from 'react';
+import { ThemeContext, Theme, Button, Typography, CssBaseline } from 'store-front-ui';
 
-React.render(
-  <Markdown source="# Your markdown here" />,
-  document.getElementById('content')
-);
+const theme = { theme: new Theme({}) };
+class App extends Component {
+  render() {
+    return (
+        <ThemeContext.Provider value={theme} >
+            <CssBaseline>
+                <Typography>
+                  <Button>Elem Button</Button>
+                </Typography>
+            </CssBaseline>
+        </ThemeContext.Provider>
+    );
+  }
+}
+
+export default App;
 ```
 
-```html
-<div class="some-class another-class"> Elem Hocs!</div>
+See what can be customized over the theme in the [Theme Section](#theme)
+
+* * * 
+
+### Running Elem locally
+```bash
+npm install
 ```
 
+```bash
+npm start
+```
 
-## Prop Types
+### Running unit tests with jest
+```bash
+npm run test
+```
 
-| Prop | Value |
-| ------ | ----------- |
-| tables | ✔ |
-| alignment | ✔ |
-| wewt | ✔ |
-| truck | X |
+### Generating Docs
+```bash
+npm run generate_docs
+```
 
-## More info?
+### Doc Viewer
+> Doesn't require npm install
 
-Read usage information and more on [react-markdown GitHub](//github.com/rexxars/react-markdown)
+```bash
+npm run docs
+```
+
+### Testing the NPM build
+```bash
+npm run prepare
+```
+
 

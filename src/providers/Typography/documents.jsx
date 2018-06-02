@@ -37,18 +37,21 @@ function TypographyDoc() {
             </Typography>
           </div>
 
+          <br />
+
           Typography coloring example using
           &#123;pallete = primary&#125;, &#123;tone = dark&#125;,
-          &#123;align = right&#125; &#123;fontFamily = Serif&#125;
+          &#123;align = center&#125; &#123;fontFamily = Serif&#125;
           <div className="md-card">
-            <Typography palette="secondary" tone="dark" align="right" fontFamily="serif" >
+            <Typography palette="secondary" tone="dark" align="center" fontFamily="serif" >
               <CommomTextTags />
             </Typography>
           </div>
 
+          <br />
+          Typography coloring example using defaults
           <div className="md-card">
             <Typography >
-              Typography coloring example using defaults
               <CommomTextTags />
             </Typography>
           </div>

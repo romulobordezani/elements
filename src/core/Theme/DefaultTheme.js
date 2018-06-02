@@ -46,13 +46,15 @@ class DefaultTheme {
         light: this.colors.dark.A100,
         main: this.colors.dark.A100,
         dark: this.colors.dark.A700,
-        contrastText: this.colors.light[50],
+        lightContrastText: 'black',
+        darkContrastText: 'white',
       },
       secondary: {
         light: this.colors.dark.A100,
         main: this.colors.dark.A700,
         dark: this.colors.dark.A400,
-        contrastText: this.colors.light[50],
+        lightContrastText: 'black',
+        darkContrastText: 'white',
       },
       black: {
         main: this.text.primary,

@@ -6,6 +6,7 @@ import MdCodeBlock from './MdCodeBlock';
 // > Documents to be shown
 import { TypographyDoc } from '../../../providers/Typography';
 import Button from '../../../elements/Button';
+import ThemeProviderDoc from '../../../providers/ThemeProvider/documents';
 
 const getStarted = require('../../../README.md');
 const getEnvolved = require('../../../CODE_OF_CONDUCT.md');
@@ -47,11 +48,7 @@ function ViewerContainer() {
       <h1><a href="#providers" className="anchor" id="providers">Providers</a></h1>
       <div>
 
-        <h2><a href="true" className="anchor" id="theme">Theme</a></h2>
-        <p>
-          Mauris eget ante eget ipsum vulputate efficitur.
-          Sed justo diam, viverra at enim non, interdum lobortis dolor.
-        </p>
+        <ThemeProviderDoc />
 
         <hr />
 
