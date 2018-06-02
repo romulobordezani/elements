@@ -1,27 +1,29 @@
 import React from 'react';
+import Markdown from 'react-markdown';
 import './ViewerContainer.css';
+import MdCodeBlock from './md-code-block';
 import Button from '../../../elements/Button';
 
-const ReactMarkdown = require('react-markdown');
-
-const getStarted = require('./mds/getStarted.md');
-
+const getStarted = require('../../../README.md');
+const getEnvolved = require('../../../CODE_OF_CONDUCT.md');
 
 function ViewerContainer() {
   return (
     <div className="viewer-container">
-      <h1><a href="true" className="anchor" id="get_started">Get Started</a></h1>
 
-      <ReactMarkdown source={getStarted} />
-
+      <h1><a href="true" className="anchor" id="get_started" style={{ visibility: 'hidden' }} >Get Started</a></h1>
+      <Markdown
+        source={getStarted}
+        escapeHtml={false}
+        renderers={{ code: MdCodeBlock }}
+      />
 
       <h1><a href="true" className="anchor" id="get_envolved">Get Envolved</a></h1>
-      <p>
-        Fusce a ex sit amet quam congue rutrum a ut nunc.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Etiam quam nisi, pharetra quis nibh non, facilisis maximus ipsum.
-        Praesent feugiat bibendum viverra.
-      </p>
+      <Markdown
+        source={getEnvolved}
+        escapeHtml={false}
+        renderers={{ code: MdCodeBlock }}
+      />
 
       <h1>Components</h1>
       <div>
@@ -56,7 +58,9 @@ function ViewerContainer() {
           Sed justo diam, viverra at enim non, interdum lobortis dolor.
         </p>
       </div>
+
     </div>
   );
 }
+
 export default ViewerContainer;

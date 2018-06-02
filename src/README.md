@@ -8,8 +8,9 @@ Elem is part of **Global Fashion Group** design system, home of react reusable e
 npm install --save git+ssh://@bitbucket.org:dafiti/store-front-ui.git#GFG-29199
 ```
 
+## HTML support
 <blockquote>
-  This blockquote will change based on the HTML settings above.
+  I'm an html blockquote, dude!
 </blockquote>
 
 ## How about some code?
