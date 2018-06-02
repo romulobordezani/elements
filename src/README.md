@@ -29,13 +29,14 @@ React.render(
 ```
 
 
-## Tables
+## Prop Types
 
-| Feature | Support |
+| Prop | Value |
 | ------ | ----------- |
 | tables | ✔ |
 | alignment | ✔ |
 | wewt | ✔ |
+| truck | X |
 
 ## More info?
 

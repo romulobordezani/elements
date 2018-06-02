@@ -6,8 +6,8 @@ import './Button.css';
 
 const styleOveride = {
   eButton: {
-    backgroundColor: props => props.theme.palette.primary.light,
-    color: props => props.theme.palette.primary.dark,
+    backgroundColor: props => props.theme.palette.primary.main,
+    color: props => props.theme.palette.primary.contrastText,
   },
 };
 

@@ -8,8 +8,8 @@ class DefaultTheme {
 
     this.palette = {
       primary: {
-        light: this.colors.light.A100,
-        main: this.colors.light.A700,
+        light: this.colors.dark.A100,
+        main: this.colors.dark.A100,
         dark: this.colors.dark.A700,
         contrastText: this.colors.light[50],
       },
