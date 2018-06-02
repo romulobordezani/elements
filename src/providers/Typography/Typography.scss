@@ -47,7 +47,7 @@ $base__font-size: 16 !default;
     }
 
     &:active, &:focus {
-      color: #111111;
+      color: inherit;
       text-decoration: underline;
     }
 

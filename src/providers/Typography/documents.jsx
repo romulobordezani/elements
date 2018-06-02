@@ -29,16 +29,19 @@ function TypographyDoc() {
             renderers={{ code: MdCodeBlock }}
           />
 
+          Typography coloring example using
+          &#123;pallete = primary&#125; & &#123;tone = main&#125;
           <div className="md-card">
             <Typography palette="primary" tone="main" >
-              Typography coloring example using pallete = secondary & tone = light
               <CommomTextTags />
             </Typography>
           </div>
 
+          Typography coloring example using
+          &#123;pallete = primary&#125;, &#123;tone = dark&#125;,
+          &#123;align = right&#125; &#123;fontFamily = Serif&#125;
           <div className="md-card">
-            <Typography palette="secondary" tone="dark" >
-              Typography coloring example using pallete = primary & tone = dark
+            <Typography palette="secondary" tone="dark" align="right" fontFamily="serif" >
               <CommomTextTags />
             </Typography>
           </div>

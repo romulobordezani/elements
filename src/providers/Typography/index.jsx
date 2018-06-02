@@ -18,14 +18,18 @@ function Typography({ theme, classes, ...props }) {
 Typography.defaultProps = {
   palette: 'black',
   tone: 'main',
+  align: 'left',
+  fontFamily: false,
 };
 
 Typography.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
   theme: PropTypes.instanceOf(Theme).isRequired,
   classes: PropTypes.shape({}).isRequired,
   palette: PropTypes.string,
   tone: PropTypes.string,
+  align: PropTypes.string,
+  fontFamily: PropTypes.string,
 };
 
 export default withTheme(reactJss(styleOverride)(Typography));

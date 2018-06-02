@@ -1,6 +1,16 @@
 Typography is an HOC integrated with the Theme, provides all styles needed to format texts in it's children dom elements
 
-### Code Samples: 
+#### Properties
+
+| Prop | Value = default| Description |
+| ------ | -------- | ----------- |
+| palette | string = black | The custom color pallet base |
+| tone | string = main | pallete's tone property |
+| align | string = left | text-align formatting |
+| fontFamily | string = { theme.typography.fontFamily }| Font-family override |
+
+
+#### Code Samples: 
 
 ```html
 <Typography palette="secondary" tone="light" >
@@ -20,4 +30,4 @@ Typography is an HOC integrated with the Theme, provides all styles needed to fo
 </Typography>
 ```
 
-### Live Examples: 
+#### Live Examples: 
