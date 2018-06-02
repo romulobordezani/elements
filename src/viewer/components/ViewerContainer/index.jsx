@@ -1,7 +1,10 @@
 import React from 'react';
 import Markdown from 'react-markdown';
 import './ViewerContainer.css';
-import MdCodeBlock from './md-code-block';
+import MdCodeBlock from './MdCodeBlock';
+
+// > Documents to be shown
+import { TypographyDoc } from '../../../providers/Typography';
 import Button from '../../../elements/Button';
 
 const getStarted = require('../../../README.md');
@@ -11,23 +14,27 @@ function ViewerContainer() {
   return (
     <div className="viewer-container">
 
-      <h1><a href="true" className="anchor" id="get_started" style={{ visibility: 'hidden' }} >Get Started</a></h1>
+      <h1><a href="#get_started" className="anchor" id="get_started" style={{ visibility: 'hidden' }} >Get Started</a></h1>
       <Markdown
         source={getStarted}
         escapeHtml={false}
         renderers={{ code: MdCodeBlock }}
       />
 
-      <h1><a href="true" className="anchor" id="get_envolved">Get Envolved</a></h1>
+      <hr />
+
+      <h1><a href="#get_envolved" className="anchor" id="get_envolved">Get Envolved</a></h1>
       <Markdown
         source={getEnvolved}
         escapeHtml={false}
         renderers={{ code: MdCodeBlock }}
       />
 
-      <h1>Components</h1>
+      <hr />
+
+      <h1><a href="#components" className="anchor" id="components">Components</a></h1>
       <div>
-        <h2><a href="true" className="anchor" id="button">Button</a></h2>
+        <h2><a href="#button" className="anchor" id="button">Button</a></h2>
         <p>
           Sed justo diam, viverra at enim non, interdum lobortis dolor.
           Mauris eget ante eget ipsum vulputate efficitur.
@@ -35,23 +42,28 @@ function ViewerContainer() {
         <Button>Button</Button>
       </div>
 
-      <h1>Providers</h1>
+      <hr />
+
+      <h1><a href="#providers" className="anchor" id="providers">Providers</a></h1>
       <div>
-        <h2><a href="true" className="anchor" id="typography">Typography</a></h2>
-        <p>
-          Mauris eget ante eget ipsum vulputate efficitur.
-          Sed justo diam, viverra at enim non, interdum lobortis dolor.
-        </p>
+
         <h2><a href="true" className="anchor" id="theme">Theme</a></h2>
         <p>
           Mauris eget ante eget ipsum vulputate efficitur.
           Sed justo diam, viverra at enim non, interdum lobortis dolor.
         </p>
+
+        <hr />
+
+        <TypographyDoc />
+
+        <hr />
         <h2><a href="true" className="anchor" id="css_baseline">CssBaseline</a></h2>
         <p>
           Mauris eget ante eget ipsum vulputate efficitur.
           Sed justo diam, viverra at enim non, interdum lobortis dolor.
         </p>
+        <hr />
         <h2><a href="true" className="anchor" id="colors">Colors</a></h2>
         <p>
           Mauris eget ante eget ipsum vulputate efficitur.

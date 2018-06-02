@@ -6,19 +6,12 @@ class DefaultTheme {
 
     this.currentTheme = 'default';
 
-    this.palette = {
-      primary: {
-        light: this.colors.dark.A100,
-        main: this.colors.dark.A100,
-        dark: this.colors.dark.A700,
-        contrastText: this.colors.light[50],
-      },
-      secondary: {
-        light: this.colors.dark.A100,
-        main: this.colors.dark.A700,
-        dark: this.colors.dark.A400,
-        contrastText: this.colors.light[50],
-      },
+    this.typography = {
+      fontFamily: 'Roboto", "Helvetica", "Arial", sans-serif"',
+      fontSize: 14,
+      fontWeightLight: 300,
+      fontWeightRegular: 400,
+      fontWeightMedium: 500,
     };
 
     this.text = {
@@ -46,6 +39,24 @@ class DefaultTheme {
       selected: 'rgba(0, 0, 0, 0.14)', // The color of a selected action.
       disabled: 'rgba(0, 0, 0, 0.26)', // The color of a disabled action.
       disabledBackground: 'rgba(0, 0, 0, 0.12)', // The background color of a disabled action.
+    };
+
+    this.palette = {
+      primary: {
+        light: this.colors.dark.A100,
+        main: this.colors.dark.A100,
+        dark: this.colors.dark.A700,
+        contrastText: this.colors.light[50],
+      },
+      secondary: {
+        light: this.colors.dark.A100,
+        main: this.colors.dark.A700,
+        dark: this.colors.dark.A400,
+        contrastText: this.colors.light[50],
+      },
+      black: {
+        main: this.text.primary,
+      },
     };
   }
 }

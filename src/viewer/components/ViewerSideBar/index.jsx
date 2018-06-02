@@ -8,7 +8,7 @@ function ViewerSideBar() {
         <li><a href="#get_started">Get Started</a></li>
         <li><a href="#get_envolved">Get Envolved</a></li>
         <li>
-          <a href="#components">Componentes</a>
+          <a href="#components">Components</a>
           <ul>
             <li><a href="#button">Button</a></li>
             <li><a href="#input">Input</a></li>
@@ -16,10 +16,10 @@ function ViewerSideBar() {
           </ul>
         </li>
         <li>
-          Providers
+          <a href="#providers">Providers</a>
           <ul>
-            <li><a href="#typography">Typography</a></li>
             <li><a href="#theme">Theme</a></li>
+            <li><a href="#typography">Typography</a></li>
             <li><a href="#css_baseline">CssBaseline</a></li>
             <li><a href="#colors">Colors</a></li>
           </ul>

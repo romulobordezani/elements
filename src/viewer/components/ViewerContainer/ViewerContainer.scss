@@ -2,7 +2,7 @@
 
   background: #FFFFFF;
   height: 100%;
-  width: 73%;
+  width: 82%;
   margin: 0 1%;
   display: inline-block;
   float: left;
@@ -22,67 +22,16 @@
     outline: none;
   }
 
-  h2{
-    margin-top: 60px;
-  }
-
-  .page-header {
-    color: #fff;
-    background: #191818;
-    margin: 0;
-    padding: 10px 20px;
-  }
-
-  .editor-pane {
-    position: fixed;
-    top: 57px;
-    left: 0;
-    bottom: 0;
-    width: 50%;
-    height: auto;
-    overflow: auto;
-    box-shadow: -10px 2px 6px 10px rgba(0, 0, 0, 0.4);
-  }
-
-  .editor textarea {
+  .md-card{
+    margin: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
     padding: 20px;
   }
 
-  .editor-pane textarea {
-    min-height: 500px;
-  }
-
-  .markdown-controls {
-    position: relative;
-    z-index: 5;
-    text-align: right;
-    color: #fff;
-    float: right;
-  }
-
-  .markdown-controls form {
-    background-color: rgba(39, 40, 34, 0.5);
-    margin-right: 20px;
-  }
-
-  .markdown-controls legend {
-    border-bottom: 0;
-    color: #fff;
-    font-size: 1.25em;
-    margin: 0;
-    padding: 10px 0 0 0;
-  }
-
-  .CodeMirror {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: auto;
-    height: auto;
-
-    font-size: 16px;
+  hr{
+    margin: 30px 0;
+    display: inline-block;
+    width: 100%;
   }
 
   pre {

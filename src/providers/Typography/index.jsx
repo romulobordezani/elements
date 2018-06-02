@@ -1,17 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Typography.css';
+import reactJss from 'react-jss';
+import { withTheme, Theme } from '../../providers/ThemeProvider';
 
-function Typography(props) {
+// > Styles
+import './Typography.css';
+import styleOverride from './Typography.jss';
+
+function Typography({ theme, classes, ...props }) {
   return (
-    <React.Fragment>
+    <div className={`eTypography ${classes.typography}`}>
       {props.children}
-    </React.Fragment>
+    </div>
   );
 }
 
-Typography.propTypes = {
-  children: PropTypes.element.isRequired,
+Typography.defaultProps = {
+  palette: 'black',
+  tone: 'main',
 };
 
-export default Typography;
+Typography.propTypes = {
+  children: PropTypes.element.isRequired,
+  theme: PropTypes.instanceOf(Theme).isRequired,
+  classes: PropTypes.shape({}).isRequired,
+  palette: PropTypes.string,
+  tone: PropTypes.string,
+};
+
+export default withTheme(reactJss(styleOverride)(Typography));
+export { default as TypographyDoc } from './documents';

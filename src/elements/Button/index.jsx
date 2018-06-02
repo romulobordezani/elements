@@ -3,13 +3,7 @@ import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
 import { withTheme, Theme } from '../../providers/ThemeProvider';
 import './Button.css';
-
-const styleOveride = {
-  eButton: {
-    backgroundColor: props => props.theme.palette.primary.main,
-    color: props => props.theme.palette.primary.contrastText,
-  },
-};
+import styleOverride from './Button.jss';
 
 function Button({ theme, classes, ...props }) {
   return (
@@ -25,4 +19,4 @@ Button.propTypes = {
   classes: PropTypes.shape({}).isRequired,
 };
 
-export default withTheme(injectSheet(styleOveride)(Button));
+export default withTheme(injectSheet(styleOverride)(Button));
