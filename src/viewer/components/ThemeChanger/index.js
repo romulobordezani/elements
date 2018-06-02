@@ -35,6 +35,16 @@ function ThemeChanger(preDefinition) {
     currentTheme: current,
   };
 
+  if (preDefinition === 'kanui') {
+    customizedTheme.typography = {
+      fontFamily: '"Oswald", "Helvetica", "Arial", "sans-serif"',
+      fontSize: 14,
+      fontWeightLight: 300,
+      fontWeightRegular: 400,
+      fontWeightMedium: 500,
+    };
+  }
+
   return new Theme(customizedTheme);
 }
 

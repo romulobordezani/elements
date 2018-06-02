@@ -7,7 +7,7 @@ class DefaultTheme {
     this.currentTheme = 'default';
 
     this.typography = {
-      fontFamily: 'Roboto", "Helvetica", "Arial", sans-serif"',
+      fontFamily: '"Roboto", "Helvetica", "Arial", "sans-serif"',
       fontSize: 14,
       fontWeightLight: 300,
       fontWeightRegular: 400,
