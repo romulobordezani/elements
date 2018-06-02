@@ -18,3 +18,4 @@ function withTheme(Component) {
 }
 
 export { ThemeContext, withTheme, Theme };
+export { default as ThemeProviderDoc } from './documents';

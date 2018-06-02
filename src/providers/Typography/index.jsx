@@ -29,7 +29,10 @@ Typography.propTypes = {
   palette: PropTypes.string,
   tone: PropTypes.string,
   align: PropTypes.string,
-  fontFamily: PropTypes.string,
+  fontFamily: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
+  ]),
 };
 
 export default withTheme(reactJss(styleOverride)(Typography));

@@ -16,3 +16,4 @@ CssBaseline.propTypes = {
 };
 
 export default CssBaseline;
+export { default as CssBaselineDoc } from './documents';

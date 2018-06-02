@@ -36,7 +36,7 @@ class DefaultTheme {
       default: '#CCC',
     };
 
-    // The colors used to style the action elements.
+    // The colors used to style the action elements like buttons, links and so on
     this.action = {
       active: 'rgba(0, 0, 0, 0.54)', // The color of an active action like an icon button.
       hover: 'rgba(0, 0, 0, 0.08)', // The colors of an hovered action.
@@ -47,7 +47,7 @@ class DefaultTheme {
     };
 
     this.palette = {
-      primary: {
+      primary: { // default but overridable
         light: this.colors.dark.A100,
         main: this.colors.dark.A100,
         dark: this.colors.dark.A700,
@@ -55,7 +55,7 @@ class DefaultTheme {
         lightContrastText: 'black',
         darkContrastText: 'white',
       },
-      secondary: {
+      secondary: { // default but overridable
         light: this.colors.dark.A100,
         main: this.colors.dark.A700,
         dark: this.colors.dark.A400,
@@ -63,11 +63,11 @@ class DefaultTheme {
         lightContrastText: 'black',
         darkContrastText: 'white',
       },
-      black: {
+      black: { // default but overridable
         main: this.text.primary,
       },
-      white: {
-        main: this.text.primary,
+      white: { // default but overridable
+        main: '#FFFFFF',
       },
     };
   }
@@ -79,7 +79,7 @@ class DefaultTheme {
 
 All elements use the palette/tone system to get theirs colors. You can define new ones and invoke them while using Elements.
 
-We provide some basic palettes as standard, they are: primary, secondary and black.
+We provide some basic palettes as standard, they are: primary, secondary, black and white.
 
 #### How to set a new palette:
 
@@ -107,7 +107,7 @@ class App extends Component {
         <ThemeContext.Provider value={theme} >
             <CssBaseline>
                 <Typography>
-                  <Button>Elem Button</Button>
+                  <Button palette="myCustomPalette" tone="myCustomTone">Elem Button</Button>
                 </Typography>
             </CssBaseline>
         </ThemeContext.Provider>
@@ -130,7 +130,7 @@ Example:
 
 
 #### Overriding
-If you use one of the standard palettes names like primary, secondary, white or black, it will override them, but only the property sent, keeping all the standard untouched.
+If you set one of the standard palettes names like 'primary', 'secondary', 'white' or 'black', it will override only properties sent, keeping all the standard untouched.
 
 Example of override: 
 
@@ -142,4 +142,5 @@ const customTheme = new Theme({
     },
   },
 });
+// All others properties are the same, but 'primary.light'
 ```

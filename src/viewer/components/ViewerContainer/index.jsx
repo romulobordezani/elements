@@ -6,7 +6,8 @@ import MdCodeBlock from './MdCodeBlock';
 // > Documents to be shown
 import { TypographyDoc } from '../../../providers/Typography';
 import Button from '../../../elements/Button';
-import ThemeProviderDoc from '../../../providers/ThemeProvider/documents';
+import { ThemeProviderDoc } from '../../../providers/ThemeProvider';
+import { CssBaselineDoc } from '../../../providers/CssBaseline';
 
 const getStarted = require('../../../README.md');
 const getEnvolved = require('../../../CODE_OF_CONDUCT.md');
@@ -55,11 +56,9 @@ function ViewerContainer() {
         <TypographyDoc />
 
         <hr />
-        <h2><a href="true" className="anchor" id="css_baseline">CssBaseline</a></h2>
-        <p>
-          Mauris eget ante eget ipsum vulputate efficitur.
-          Sed justo diam, viverra at enim non, interdum lobortis dolor.
-        </p>
+
+        <CssBaselineDoc />
+
         <hr />
         <h2><a href="true" className="anchor" id="colors">Colors</a></h2>
         <p>
