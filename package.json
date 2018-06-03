@@ -21,6 +21,7 @@
     "url": "git+ssh://git@bitbucket.org/dafiti/store-front-ui.git"
   },
   "dependencies": {
+    "fbgrid-spec-react": "^0.2.0",
     "lodash": "^4.17.10",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",

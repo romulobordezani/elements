@@ -45,4 +45,4 @@ class DefaultColors {
 }
 
 export default DefaultColors;
-export { default as ColorsDoc } from './documents';
+

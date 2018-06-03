@@ -8,7 +8,7 @@ import { TypographyDoc } from '../../../providers/Typography';
 import Button from '../../../elements/Button';
 import { ThemeProviderDoc } from '../../../providers/ThemeProvider';
 import { CssBaselineDoc } from '../../../providers/CssBaseline';
-import { ColorsDoc } from '../../../core/Colors';
+import ColorsDoc from '../../../core/Colors/documents';
 
 const getStarted = require('../../../README.md');
 const getEnvolved = require('../../../CODE_OF_CONDUCT.md');

@@ -59,6 +59,9 @@ class DefaultTheme {
       black: {
         main: this.text.primary,
       },
+      white: {
+        main: '#FFFFFF',
+      },
     };
   }
 }
