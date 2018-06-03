@@ -37,7 +37,6 @@ function ViewerContainer() {
 
       <h1><a href="#providers" className="anchor" id="providers">Providers</a></h1>
       <div>
-
         <ThemeProviderDoc />
         <hr />
         <TypographyDoc />
@@ -45,8 +44,9 @@ function ViewerContainer() {
         <CssBaselineDoc />
         <hr />
         <ColorsDoc />
-
       </div>
+
+      <hr />
 
       <h1><a href="#components" className="anchor" id="components">Components</a></h1>
       <div>

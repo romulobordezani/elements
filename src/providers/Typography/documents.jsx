@@ -7,15 +7,6 @@ import { withTheme } from '../ThemeProvider';
 
 const readme = require('./README.md');
 
-const cellStyle = {
-  margin: '0.1em',
-  textAlign: 'center',
-  paddingLeft: '0.1em',
-  paddingRight: '0.1em',
-  minWidth: '32%',
-  flexGrow: 1,
-};
-
 const grid = {
   style: {
     flexDirection: 'row',
@@ -23,7 +14,6 @@ const grid = {
   },
   cells: [
     {
-      style: cellStyle,
       component: {
         name: 'typographySample',
         options: {
@@ -34,7 +24,6 @@ const grid = {
       },
     },
     {
-      style: cellStyle,
       component: {
         name: 'typographySample',
         options: {
@@ -47,7 +36,6 @@ const grid = {
       },
     },
     {
-      style: cellStyle,
       component: {
         name: 'typographySample',
         options: {
@@ -58,7 +46,7 @@ const grid = {
   ],
 };
 
-function CommomTextTags() {
+function CommonTextTags() {
   return (
     <React.Fragment>
       <h1>Header H1</h1>
@@ -75,16 +63,14 @@ function CommomTextTags() {
 
 const typographySample = withTheme(({ theme, ...props }) => {
   return (
-    <div>
-      <div className="md-card">
-        <div className="md-card__title">
-          { props.info }
-        </div>
-        <div className="md-card__content">
-          <Typography {...props} >
-            <CommomTextTags />
-          </Typography>
-        </div>
+    <div className="md-card">
+      <div className="md-card__title">
+        { props.info }
+      </div>
+      <div className="md-card__content">
+        <Typography {...props} >
+          <CommonTextTags />
+        </Typography>
       </div>
     </div>
   );
@@ -99,7 +85,7 @@ function TypographyDoc() {
     <React.Fragment>
       <h2><a href="#typography" className="anchor" id="typography">Typography</a></h2>
       <Typography>
-        <div>
+        <div className="debug">
           <Markdown
             source={readme}
             escapeHtml={false}

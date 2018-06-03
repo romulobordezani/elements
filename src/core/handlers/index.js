@@ -1,1 +1,1 @@
-export { merge, info, toArray } from 'lodash';
+export { merge, info } from 'lodash';

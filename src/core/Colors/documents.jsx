@@ -6,20 +6,12 @@ import { withTheme } from '../../providers/ThemeProvider';
 
 const readme = require('./README.md');
 
-const cellStyle = {
-  margin: '0.1em',
-  textAlign: 'center',
-  paddingLeft: '0.1em',
-  paddingRight: '0.1em',
-};
-
 const grid = {
   style: {
     flexDirection: 'row',
   },
   cells: [
     {
-      style: cellStyle,
       component: {
         name: 'ColorList',
         options: {
@@ -29,7 +21,6 @@ const grid = {
       },
     },
     {
-      style: cellStyle,
       component: {
         name: 'ColorList',
         options: {
@@ -59,8 +50,10 @@ const ColorList = withTheme(({ theme, ...props }) => {
   }
 
   return (
-    <div className="md-card">
-      { listColors(theme.colors[props.tone], props.contrastText) }
+    <div className="e-grid">
+      <div className="md-card">
+        { listColors(theme.colors[props.tone], props.contrastText) }
+      </div>
     </div>
   );
 });

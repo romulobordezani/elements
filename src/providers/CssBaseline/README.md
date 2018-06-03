@@ -5,7 +5,7 @@ This normalization is the same used by material UI, Twitter, TweetDeck, GitHub, 
 
 Also, implements GFG overrides in a centralized way, through CustomBaseline.scss. 
 
-It's required while using Elem. 
+Contains all styles needed to set gutter and spaces to the grid system [fbgrid-spec-react](https://www.npmjs.com/package/fbgrid-spec-react) . 
 
 ### Example: 
 
