@@ -2,7 +2,7 @@
 
 exports[`Theme Renders a CUSTOM theme, with new colors customized 1`] = `
 <button
-  className="eButton undefined"
+  className="eButton Button-eButton-0-1-3 Button-eButton-0-1-1"
 >
   Button
 </button>
@@ -10,7 +10,7 @@ exports[`Theme Renders a CUSTOM theme, with new colors customized 1`] = `
 
 exports[`Theme Renders a default theme, without any customization 1`] = `
 <button
-  className="eButton undefined"
+  className="eButton Button-eButton-0-1-2 Button-eButton-0-1-1"
 >
   Button
 </button>

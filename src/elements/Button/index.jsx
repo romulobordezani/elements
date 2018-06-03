@@ -3,7 +3,7 @@ import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
 import { withTheme, Theme } from '../../providers/ThemeProvider';
 import './Button.css';
-import styleOverride from './Button.jss';
+import styleOverride from './Button.jstyle';
 
 function Button({ theme, classes, ...props }) {
   return (

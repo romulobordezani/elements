@@ -5,7 +5,7 @@ import { withTheme, Theme } from '../../providers/ThemeProvider';
 
 // > Styles
 import './Typography.css';
-import styleOverride from './Typography.jss';
+import styleOverride from './Typography.jstyle';
 
 function Typography({ theme, classes, ...props }) {
   return (
