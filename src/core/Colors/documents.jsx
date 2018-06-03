@@ -1,29 +1,76 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Markdown from 'react-markdown';
+import FlexBoxGrid from 'fbgrid-spec-react';
 import MdCodeBlock from '../../viewer/components/ViewerContainer/MdCodeBlock';
-import { withTheme, Theme } from '../../providers/ThemeProvider';
+import { withTheme } from '../../providers/ThemeProvider';
 
 const readme = require('./README.md');
 
-function listColors(colors, contrastText) {
-  const coloredList = Object.keys(colors).map((key) => {
-    return (
-      <div
-        key={key}
-        style={{
-          backgroundColor: colors[key],
-          color: contrastText,
-          padding: '6px',
-        }}
-      >{key}
-      </div>
-    );
-  });
-  return coloredList;
-}
+const cellStyle = {
+  margin: '0.1em',
+  textAlign: 'center',
+  paddingLeft: '0.1em',
+  paddingRight: '0.1em',
+};
 
-function ColorsDoc({ theme }) {
+const grid = {
+  style: {
+    flexDirection: 'row',
+  },
+  cells: [
+    {
+      style: cellStyle,
+      component: {
+        name: 'ColorList',
+        options: {
+          tone: 'dark',
+          contrastText: '#FFFFFF',
+        },
+      },
+    },
+    {
+      style: cellStyle,
+      component: {
+        name: 'ColorList',
+        options: {
+          tone: 'light',
+          contrastText: '#111111',
+        },
+      },
+    },
+  ],
+};
+
+const ColorList = withTheme(({ theme, ...props }) => {
+  function listColors(colors, contrastText) {
+    return Object.keys(colors).map((key) => {
+      return (
+        <div
+          key={key}
+          style={{
+            backgroundColor: colors[key],
+            color: contrastText,
+            padding: '6px',
+          }}
+        >{key}
+        </div>
+      );
+    });
+  }
+
+  return (
+    <div className="md-card">
+      { listColors(theme.colors[props.tone], props.contrastText) }
+    </div>
+  );
+});
+
+const componentsMap = {
+  ColorList,
+};
+
+
+function ColorsDoc() {
   return (
     <React.Fragment>
       <h2><a href="colors" className="anchor" id="colors">Colors</a></h2>
@@ -34,14 +81,12 @@ function ColorsDoc({ theme }) {
           renderers={{ code: MdCodeBlock }}
         />
       </div>
-      { listColors(theme.colors.dark, '#FFFFFF') }
-      { listColors(theme.colors.light, '#000000') }
+      <FlexBoxGrid
+        spec={grid}
+        componentsMap={componentsMap}
+      />
     </React.Fragment>
   );
 }
 
-ColorsDoc.propTypes = {
-  theme: PropTypes.instanceOf(Theme).isRequired,
-};
-
-export default withTheme(ColorsDoc);
+export default ColorsDoc;
