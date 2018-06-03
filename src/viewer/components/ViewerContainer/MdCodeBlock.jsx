@@ -2,8 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// eslint-disable-next-line
-const hljs = window.hljs;
+// Reference: https://highlightjs.org
+const { hljs } = window;
 
 class MdCodeBlock extends React.PureComponent {
   constructor(props) {

@@ -2,12 +2,7 @@
 
 exports[`Theme Renders a CUSTOM theme, with new colors customized 1`] = `
 <button
-  style={
-    Object {
-      "backgroundColor": "#3cbdaf",
-      "color": "#1b3b31",
-    }
-  }
+  className="eButton undefined"
 >
   Button
 </button>
@@ -15,12 +10,7 @@ exports[`Theme Renders a CUSTOM theme, with new colors customized 1`] = `
 
 exports[`Theme Renders a default theme, without any customization 1`] = `
 <button
-  style={
-    Object {
-      "backgroundColor": "#3cbdaf",
-      "color": "#1b3b31",
-    }
-  }
+  className="eButton undefined"
 >
   Button
 </button>
