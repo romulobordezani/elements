@@ -8,6 +8,7 @@ import { TypographyDoc } from '../../../providers/Typography';
 import Button from '../../../elements/Button';
 import { ThemeProviderDoc } from '../../../providers/ThemeProvider';
 import { CssBaselineDoc } from '../../../providers/CssBaseline';
+import { ColorsDoc } from '../../../core/Colors';
 
 const getStarted = require('../../../README.md');
 const getEnvolved = require('../../../CODE_OF_CONDUCT.md');
@@ -34,6 +35,19 @@ function ViewerContainer() {
 
       <hr />
 
+      <h1><a href="#providers" className="anchor" id="providers">Providers</a></h1>
+      <div>
+
+        <ThemeProviderDoc />
+        <hr />
+        <TypographyDoc />
+        <hr />
+        <CssBaselineDoc />
+        <hr />
+        <ColorsDoc />
+
+      </div>
+
       <h1><a href="#components" className="anchor" id="components">Components</a></h1>
       <div>
         <h2><a href="#button" className="anchor" id="button">Button</a></h2>
@@ -45,27 +59,6 @@ function ViewerContainer() {
       </div>
 
       <hr />
-
-      <h1><a href="#providers" className="anchor" id="providers">Providers</a></h1>
-      <div>
-
-        <ThemeProviderDoc />
-
-        <hr />
-
-        <TypographyDoc />
-
-        <hr />
-
-        <CssBaselineDoc />
-
-        <hr />
-        <h2><a href="true" className="anchor" id="colors">Colors</a></h2>
-        <p>
-          Mauris eget ante eget ipsum vulputate efficitur.
-          Sed justo diam, viverra at enim non, interdum lobortis dolor.
-        </p>
-      </div>
 
     </div>
   );
