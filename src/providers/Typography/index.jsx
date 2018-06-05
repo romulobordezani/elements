@@ -36,4 +36,4 @@ Typography.propTypes = {
 };
 
 export default withTheme(reactJss(styleOverride)(Typography));
-export { default as TypographyDoc } from './documents';
+// export { default as TypographyDoc } from './documents';
