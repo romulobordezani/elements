@@ -31,8 +31,48 @@ function ThemeChanger(preDefinition) {
   }
 
   const customizedTheme = {
-    colors: color,
     currentTheme: current,
+    palette: {
+      primary: {
+        colors: color,
+      },
+      secondary: {
+        colors: {
+          dark: {
+            50: '#858585',
+            100: '#5e5e5e',
+            200: '#424242',
+            300: '#1f1f1f',
+            400: '#0f0f0f',
+            500: '#000000',
+            600: '#000000',
+            700: '#000000',
+            800: '#000000',
+            900: '#000000',
+            A100: color.dark[500],
+            A200: color.dark[700],
+            A400: '#1d1616',
+            A700: '#0d0c0c',
+          },
+          light: {
+            50: '#858585',
+            100: '#5e5e5e',
+            200: '#424242',
+            300: '#1f1f1f',
+            400: '#0f0f0f',
+            500: '#000000',
+            600: '#000000',
+            700: '#000000',
+            800: '#000000',
+            900: '#000000',
+            A100: color.light[500],
+            A200: color.light[700],
+            A400: '#1d1616',
+            A700: '#0d0c0c',
+          },
+        },
+      },
+    },
   };
 
   if (preDefinition === 'kanui') {

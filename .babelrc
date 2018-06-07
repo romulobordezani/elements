@@ -5,14 +5,15 @@
       { "modules": false }
     ],
     "react",
-    "stage-2"
+    "stage-0",
+    "es2015"
   ],
   "env": {
     "dev": {
-      "presets": ["env", "react", "stage-2"],
+      "presets": ["env", "react", "stage-2"]
     },
     "test": {
-      "presets": ["react", "stage-2", "es2015"]
+      "presets": ["es2015"]
     }
   }
 }

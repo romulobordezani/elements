@@ -19,8 +19,8 @@ Typography is an High Order Component responsible for text handling integrated w
 ```
 
 ```html
-<Typography palette="primary" tone="dark" >
-  Typography coloring example using pallete = primary & tone = dark 
+<Typography palette="primary" tone="dark" fontFamily="Serif" align="center" >
+  Typography coloring example using pallete = primary & tone = dark, font Family override and align.
 </Typography>
 ```
 

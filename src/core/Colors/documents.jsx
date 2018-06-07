@@ -6,26 +6,60 @@ import { withTheme } from '../../providers/ThemeProvider';
 
 const readme = require('./README.md');
 
+const cellStyle = {
+  margin: '0.1em',
+  textAlign: 'center',
+  paddingLeft: '0.1em',
+  paddingRight: '0.1em',
+  flexGrow: 0,
+};
+
 const grid = {
   style: {
     flexDirection: 'row',
   },
   cells: [
     {
+      style: cellStyle,
       component: {
         name: 'ColorList',
         options: {
+          palette: 'primary',
           tone: 'dark',
           contrastText: '#FFFFFF',
         },
       },
     },
     {
+      style: cellStyle,
       component: {
         name: 'ColorList',
         options: {
+          palette: 'primary',
           tone: 'light',
           contrastText: '#111111',
+        },
+      },
+    },
+    {
+      style: cellStyle,
+      component: {
+        name: 'ColorList',
+        options: {
+          palette: 'secondary',
+          tone: 'dark',
+          contrastText: '#FFFFFF',
+        },
+      },
+    },
+    {
+      style: cellStyle,
+      component: {
+        name: 'ColorList',
+        options: {
+          palette: 'secondary',
+          tone: 'light',
+          contrastText: '#FFFFFF',
         },
       },
     },
@@ -52,7 +86,8 @@ const ColorList = withTheme(({ theme, ...props }) => {
   return (
     <div className="e-grid">
       <div className="md-card">
-        { listColors(theme.colors[props.tone], props.contrastText) }
+        <span style={{ padding: '5px', fontSize: '0.8em' }}>{ props.palette } : { props.tone }</span>
+        { listColors(theme.palette[props.palette].colors[props.tone], props.contrastText) }
       </div>
     </div>
   );

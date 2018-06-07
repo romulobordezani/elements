@@ -1,3 +1,0 @@
-@function calc-em($target, $context: $base__font-size) {
-  @return ($target / $context) * 1em;
-}

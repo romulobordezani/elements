@@ -4,14 +4,14 @@ import './ViewerContainer.css';
 import MdCodeBlock from './MdCodeBlock';
 
 // > Documents to be shown
-import { TypographyDoc } from '../../../providers/Typography';
-import Button from '../../../elements/Button';
-import { ThemeProviderDoc } from '../../../providers/ThemeProvider';
-import { CssBaselineDoc } from '../../../providers/CssBaseline';
+import TypographyDoc from '../../../providers/Typography/documents';
+import ButtonDocs from '../../../elements/Button/documents';
+import ThemeProviderDoc from '../../../providers/ThemeProvider/documents';
 import ColorsDoc from '../../../core/Colors/documents';
 
 const getStarted = require('../../../README.md');
 const getEnvolved = require('../../../CODE_OF_CONDUCT.md');
+const getTodo = require('../../../TODO.md');
 
 function ViewerContainer() {
   return (
@@ -33,6 +33,13 @@ function ViewerContainer() {
         renderers={{ code: MdCodeBlock }}
       />
 
+      <h2>Get inspired:</h2>
+      <Markdown
+        source={getEnvolved}
+        escapeHtml={false}
+        renderers={{ code: getTodo }}
+      />
+
       <hr />
 
       <h1><a href="#providers" className="anchor" id="providers">Providers</a></h1>
@@ -41,24 +48,13 @@ function ViewerContainer() {
         <hr />
         <TypographyDoc />
         <hr />
-        <CssBaselineDoc />
-        <hr />
         <ColorsDoc />
       </div>
 
       <hr />
 
       <h1><a href="#components" className="anchor" id="components">Components</a></h1>
-      <div>
-        <h2><a href="#button" className="anchor" id="button">Button</a></h2>
-        <p>
-          Sed justo diam, viverra at enim non, interdum lobortis dolor.
-          Mauris eget ante eget ipsum vulputate efficitur.
-        </p>
-        <Button>Button</Button>
-      </div>
-
-      <hr />
+      <ButtonDocs />
 
     </div>
   );
