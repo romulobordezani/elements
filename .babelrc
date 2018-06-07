@@ -5,7 +5,8 @@
       { "modules": false }
     ],
     "react",
-    "stage-2",
+    "stage-0",
+    "es2015"
   ],
   "env": {
     "dev": {
