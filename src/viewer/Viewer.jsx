@@ -1,9 +1,9 @@
 /* eslint react/no-unused-state: 0 */
 import React from 'react';
+import 'normalize.css';
 import Theme from '../core/Theme';
 
 import { ThemeContext } from '../providers/ThemeProvider';
-import CssBaseline from '../providers/CssBaseline';
 import Typography from '../providers/Typography';
 
 import ThemeChanger from './components/ThemeChanger';
@@ -38,15 +38,13 @@ class Viewer extends React.Component {
   render() {
     return (
       <ThemeContext.Provider value={this.state}>
-        <CssBaseline>
-          <Typography>
-            <div className="Viewer">
-              <ViewerHeader />
-              <ViewerSideBar />
-              <ViewerContainer />
-            </div>
-          </Typography>
-        </CssBaseline>
+        <Typography>
+          <div className="Viewer">
+            <ViewerHeader />
+            <ViewerSideBar />
+            <ViewerContainer />
+          </div>
+        </Typography>
       </ThemeContext.Provider>);
   }
 }

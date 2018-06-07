@@ -2,14 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import reactJss from 'react-jss';
 import { withTheme, Theme } from '../../providers/ThemeProvider';
-
-// > Styles
-import './Typography.css';
 import styleOverride from './Typography.jstyle';
 
 function Typography({ theme, classes, ...props }) {
   return (
-    <div className={`eTypography ${classes.typography}`}>
+    <div className={`eTypography ${classes.eTypography}`}>
       {props.children}
     </div>
   );
@@ -17,7 +14,7 @@ function Typography({ theme, classes, ...props }) {
 
 Typography.defaultProps = {
   palette: 'black',
-  tone: 'main',
+  tone: 'dark',
   align: 'left',
   fontFamily: false,
 };
@@ -36,4 +33,3 @@ Typography.propTypes = {
 };
 
 export default withTheme(reactJss(styleOverride)(Typography));
-export { default as TypographyDoc } from './documents';

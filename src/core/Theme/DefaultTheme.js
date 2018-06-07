@@ -34,7 +34,7 @@ class DefaultTheme {
     // The colors used to style the action elements.
     this.action = {
       active: 'rgba(0, 0, 0, 0.54)', // The color of an active action like an icon button.
-      hover: 'rgba(0, 0, 0, 0.08)', // The colors of an hovered action.
+      hover: 'rgba(0, 0, 0, 0.37)', // The colors of an hovered action.
       hoverOpacity: 0.08,
       selected: 'rgba(0, 0, 0, 0.14)', // The color of a selected action.
       disabled: 'rgba(0, 0, 0, 0.26)', // The color of a disabled action.
@@ -44,7 +44,7 @@ class DefaultTheme {
     this.palette = {
       primary: {
         light: this.colors.dark.A100,
-        main: this.colors.dark.A100,
+        main: this.colors.dark.A200,
         dark: this.colors.dark.A700,
         lightContrastText: 'black',
         darkContrastText: 'white',
@@ -57,10 +57,12 @@ class DefaultTheme {
         darkContrastText: 'white',
       },
       black: {
-        main: this.text.primary,
+        dark: this.text.primary,
+        light: this.action.hover,
       },
       white: {
-        main: '#FFFFFF',
+        dark: this.text.primary,
+        light: this.action.hover,
       },
     };
   }

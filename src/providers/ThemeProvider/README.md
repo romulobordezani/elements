@@ -1,4 +1,4 @@
-Themes are the base of everything on Elem, you gonna need to define one to see things working here.
+Vito Themes are the base of everything on Elem, you gonna need to define one to see things working here.
 
 You can override every property of it and the merge is made automatically when a new Theme is instantiated.
 

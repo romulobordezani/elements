@@ -7,3 +7,5 @@ You are welcome to help us improving **Elem** but, please, notice the following 
  + The new element has a README.md file and is exported to npm
  + Also, the new element needs to be previewed on the main doc, and the public docs must to be updated
  + Please, use [BEM](http://getbem.com/introduction/ "BEM Site") on styles  
+
+Without ideas from where to start? Check out our todo list.

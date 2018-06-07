@@ -1,4 +1,4 @@
-Based on Material Desigh Color system, it uses shades from 50 to 900 and accent colors from 100 to 700.
+Agora vai. Based on Material Desigh Color system, it uses shades from 50 to 900 and accent colors from 100 to 700.
 
 You can generate new color palettes on [Palette Generator](http://mcg.mbitson.com/#!?mcgpalette0=%23e3e4e5&themename=mcgtheme) Download it as Material Ui Next ( The closest format );
 
