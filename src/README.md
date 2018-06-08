@@ -1,14 +1,14 @@
 ![GFG](https://d21buns5ku92am.cloudfront.net/59997/images/186068-Bildschirmfoto%202015-11-05%20um%2018.08.38-87e3ab-large-1446743872.png#dfg-logo)
 
 
-Elem is part of **Global Fashion Group** design system, home of react reusable elements among different themes.
+**Elem** is part of the **Global Fashion Group** design system, home of react reusable elements between different themes.
 
-As an Atomic Design adopter, our design system is using the following scheme to split components:
+As an Atomic Design adopter, our design system is using the following scheme to compose components:
 
 ![Atomic Design](https://www.thumb321.com.br/img-e07e14467e784b80#atomic-design)
 
 <blockquote>
- <strong>Elem</strong> is only in charge of Atoms, also called elements. All others components should be composed outside of Elem.
+ <strong>Elem</strong> is only in charge of Atoms, also called Elements like buttons, inputs, and so on. All smarter components should be composed outside of Elem.
 </blockquote>
 
 * * *
@@ -16,7 +16,7 @@ As an Atomic Design adopter, our design system is using the following scheme to 
 ### Using Elem
 Installing while a private npm server isn't available
 ```bash
-npm install --save git+ssh://@bitbucket.org:dafiti/store-front-ui.git#GFG-29199
+npm install --save git+ssh://@bitbucket.org:dafiti/store-front-ui.git#master
 ```
 
 

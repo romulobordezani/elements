@@ -5,7 +5,7 @@ import MdCodeBlock from './MdCodeBlock';
 
 // > Documents to be shown
 import TypographyDoc from '../../../providers/Typography/documents';
-import Button from '../../../elements/Button';
+import ButtonDocs from '../../../elements/Button/documents';
 import ThemeProviderDoc from '../../../providers/ThemeProvider/documents';
 import ColorsDoc from '../../../core/Colors/documents';
 
@@ -54,16 +54,7 @@ function ViewerContainer() {
       <hr />
 
       <h1><a href="#components" className="anchor" id="components">Components</a></h1>
-      <div>
-        <h2><a href="#button" className="anchor" id="button">Button</a></h2>
-        <p>
-          Sed justo diam, viverra at enim non, interdum lobortis dolor.
-          Mauris eget ante eget ipsum vulputate efficitur.
-        </p>
-        <Button>Button</Button>
-      </div>
-
-      <hr />
+      <ButtonDocs />
 
     </div>
   );

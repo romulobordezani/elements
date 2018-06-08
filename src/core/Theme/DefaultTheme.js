@@ -2,8 +2,6 @@ import DefaultColors from '../Colors/index';
 
 class DefaultTheme {
   constructor(theme) {
-    this.colors = new DefaultColors(theme.colors);
-
     this.currentTheme = 'default';
 
     this.typography = {
@@ -41,29 +39,123 @@ class DefaultTheme {
       disabledBackground: 'rgba(0, 0, 0, 0.12)', // The background color of a disabled action.
     };
 
-    this.palette = {
-      primary: {
-        light: this.colors.dark.A100,
-        main: this.colors.dark.A200,
-        dark: this.colors.dark.A700,
-        lightContrastText: 'black',
-        darkContrastText: 'white',
+    this.palette = {};
+
+    function getMixedColors(paletteName, colorOverride) {
+      const mixedColors = {};
+
+      if ('palette' in theme && paletteName in theme.palette) {
+        Object.assign(mixedColors, theme.palette[paletteName].colors);
+      }
+
+      Object.assign(mixedColors, colorOverride);
+
+      return new DefaultColors(mixedColors);
+    }
+
+    const PrimaryColors = getMixedColors('primary');
+    this.palette.primary = {
+      light: PrimaryColors.light[500],
+      lightContrastText: 'white',
+      main: PrimaryColors.light[500],
+      dark: PrimaryColors.dark[500],
+      darkContrastText: 'white',
+      colors: PrimaryColors,
+    };
+
+
+    const SecondaryColors = getMixedColors('secondary');
+    this.palette.secondary = {
+      light: SecondaryColors.light[500],
+      lightContrastText: 'white',
+      main: SecondaryColors.light[500],
+      dark: SecondaryColors.light[500],
+      darkContrastText: 'white',
+      colors: SecondaryColors,
+    };
+
+    const BlackColors = getMixedColors('black', {
+      dark: {
+        50: '#858585',
+        100: '#5e5e5e',
+        200: '#424242',
+        300: '#1f1f1f',
+        400: '#0f0f0f',
+        500: '#000000',
+        600: '#000000',
+        700: '#000000',
+        800: '#000000',
+        900: '#000000',
+        A100: '#3cbdaf',
+        A200: '#1f6059',
+        A400: '#1d1616',
+        A700: '#0d0c0c',
       },
-      secondary: {
-        light: this.colors.dark.A100,
-        main: this.colors.dark.A700,
-        dark: this.colors.dark.A400,
-        lightContrastText: 'black',
-        darkContrastText: 'white',
+      light: {
+        50: '#858585',
+        100: '#5e5e5e',
+        200: '#424242',
+        300: '#1f1f1f',
+        400: '#0f0f0f',
+        500: '#000000',
+        600: '#000000',
+        700: '#000000',
+        800: '#000000',
+        900: '#000000',
+        A100: '#3cbdaf',
+        A200: '#1f6059',
+        A400: '#1d1616',
+        A700: '#0d0c0c',
       },
-      black: {
-        dark: this.text.primary,
-        light: this.action.hover,
+    });
+    this.palette.black = {
+      light: BlackColors.light[500],
+      lightContrastText: 'white',
+      main: BlackColors.light[500],
+      dark: BlackColors.light[500],
+      colors: BlackColors,
+    };
+
+    const WhiteColors = getMixedColors('white', {
+      dark: {
+        50: '#ffffff',
+        100: '#ffffff',
+        200: '#ffffff',
+        300: '#ebebeb',
+        400: '#dbdbdb',
+        500: '#cccccc',
+        600: '#bdbdbd',
+        700: '#adadad',
+        800: '#9e9e9e',
+        900: '#8f8f8f',
+        A100: '#ffffff',
+        A200: '#ffffff',
+        A400: '#e9e2e2',
+        A700: '#dbd7d7',
       },
-      white: {
-        dark: this.text.primary,
-        light: this.action.hover,
+      light: {
+        50: '#ffffff',
+        100: '#ffffff',
+        200: '#ffffff',
+        300: '#ffffff',
+        400: '#ffffff',
+        500: '#ffffff',
+        600: '#e3e3e3',
+        700: '#d3d3d3',
+        800: '#c4c4c4',
+        900: '#b5b5b5',
+        A100: '#ffffff',
+        A200: '#ffffff',
+        A400: '#ffffff',
+        A700: '#ffffff',
       },
+    });
+    this.palette.white = {
+      light: BlackColors.light[500],
+      lightContrastText: '#333333',
+      main: BlackColors.light[500],
+      dark: BlackColors.light[500],
+      colors: WhiteColors,
     };
   }
 }

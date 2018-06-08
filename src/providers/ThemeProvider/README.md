@@ -1,4 +1,4 @@
-Vito Themes are the base of everything on Elem, you gonna need to define one to see things working here.
+Themes are the base of everything on Elem, you gonna need to define one to see things working here.
 
 You can override every property of it and the merge is made automatically when a new Theme is instantiated.
 
@@ -7,8 +7,6 @@ Take a look on all available and overridable properties:
 ```js
 class DefaultTheme {
   constructor(theme) {
-    this.colors = new DefaultColors(theme.colors);
-
     this.currentTheme = 'default';
 
     this.typography = {
@@ -36,42 +34,57 @@ class DefaultTheme {
       default: '#CCC',
     };
 
-    // The colors used to style the action elements like buttons, links and so on
+    // The colors used to style the action elements.
     this.action = {
       active: 'rgba(0, 0, 0, 0.54)', // The color of an active action like an icon button.
-      hover: 'rgba(0, 0, 0, 0.08)', // The colors of an hovered action.
+      hover: 'rgba(0, 0, 0, 0.37)', // The colors of an hovered action.
       hoverOpacity: 0.08,
       selected: 'rgba(0, 0, 0, 0.14)', // The color of a selected action.
       disabled: 'rgba(0, 0, 0, 0.26)', // The color of a disabled action.
       disabledBackground: 'rgba(0, 0, 0, 0.12)', // The background color of a disabled action.
     };
 
-    this.palette = {
-      primary: { // default but overridable
-        light: this.colors.dark.A100,
-        main: this.colors.dark.A100,
-        dark: this.colors.dark.A700,
-        contrastText: this.colors.light[50],
-        lightContrastText: 'black',
-        darkContrastText: 'white',
-      },
-      secondary: { // default but overridable
-        light: this.colors.dark.A100,
-        main: this.colors.dark.A700,
-        dark: this.colors.dark.A400,
-        contrastText: this.colors.light[50],
-        lightContrastText: 'black',
-        darkContrastText: 'white',
-      },
-      black: { // default but overridable
-        main: this.text.primary,
-      },
-      white: { // default but overridable
-        main: '#FFFFFF',
-      },
+    this.palette = {};
+
+    this.palette.primary = {
+      light: PrimaryColors.light[500],
+      lightContrastText: 'white',
+      main: PrimaryColors.light[500],
+      dark: PrimaryColors.dark[500],
+      darkContrastText: 'white',
+      colors: PrimaryColors,
+    };
+
+    this.palette.secondary = {
+      light: SecondaryColors.light[500],
+      lightContrastText: 'white',
+      main: SecondaryColors.light[500],
+      dark: SecondaryColors.light[500],
+      darkContrastText: 'white',
+      colors: SecondaryColors,
+    };
+
+    
+    this.palette.black = {
+      light: BlackColors.light[500],
+      lightContrastText: 'white',
+      main: BlackColors.light[500],
+      dark: BlackColors.light[500],
+      colors: BlackColors,
+    };
+
+    this.palette.white = {
+      light: BlackColors.light[500],
+      lightContrastText: '#333333',
+      main: BlackColors.light[500],
+      dark: BlackColors.light[500],
+      colors: WhiteColors,
     };
   }
 }
+
+export default DefaultTheme;
+
 
 ```
 

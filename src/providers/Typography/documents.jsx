@@ -7,6 +7,14 @@ import { withTheme } from '../ThemeProvider';
 
 const readme = require('./README.md');
 
+const cellStyle = {
+  margin: '0.1em',
+  textAlign: 'center',
+  paddingLeft: '0.1em',
+  paddingRight: '0.1em',
+  flexGrow: 1,
+};
+
 const grid = {
   style: {
     flexDirection: 'row',
@@ -14,21 +22,23 @@ const grid = {
   },
   cells: [
     {
+      style: cellStyle,
       component: {
         name: 'typographySample',
         options: {
-          info: 'primary > main, text: centered, fontFamily: Serif',
+          info: 'primary: dark',
           palette: 'primary',
-          tone: 'main',
+          tone: 'dark',
         },
       },
     },
     {
+      style: cellStyle,
       component: {
         name: 'typographySample',
         options: {
-          info: 'primary > dark, text: centered, fontFamily: Serif',
-          palette: 'primary',
+          info: 'secondary: dark, text: centered, fontFamily: Serif',
+          palette: 'secondary',
           tone: 'dark',
           align: 'center',
           fontFamily: 'Serif',
@@ -36,6 +46,7 @@ const grid = {
       },
     },
     {
+      style: cellStyle,
       component: {
         name: 'typographySample',
         options: {

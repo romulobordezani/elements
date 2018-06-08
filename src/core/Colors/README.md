@@ -7,7 +7,7 @@ You can generate new color palettes on [Palette Generator](http://mcg.mbitson.co
 ```js
 import DefaultColors from '/core/Colors/index';
 
-const colors = {
+const customSecondaryColors = new DefaultColors({
   dark: {
     50: '#858585',
     100: '#5e5e5e',
@@ -20,30 +20,72 @@ const colors = {
     800: '#000000',
     900: '#000000',
     A100: '#3cbdaf',
-    A200: '#319c90',
-    A400: '#2a685c',
-    A700: '#1b3b31',
+    A200: '#1f6059',
+    A400: '#1d1616',
+    A700: '#0d0c0c',
   },
   light: {
-    50: '#ffffff',
-    100: '#ffffff',
-    200: '#ffffff',
-    300: '#ffffff',
-    400: '#f3f3f4',
-    500: '#e3e4e5',
-    600: '#d3d5d6',
-    700: '#c3c5c8',
-    800: '#b3b6b9',
-    900: '#a4a7aa',
-    A100: '#96bdac',
-    A200: '#7ea392',
-    A400: '#638574',
-    A700: '#415e4e',
-};
+    50: '#858585',
+    100: '#5e5e5e',
+    200: '#424242',
+    300: '#1f1f1f',
+    400: '#0f0f0f',
+    500: '#000000',
+    600: '#000000',
+    700: '#000000',
+    800: '#000000',
+    900: '#000000',
+    A100: '#3cbdaf',
+    A200: '#1f6059',
+    A400: '#1d1616',
+    A700: '#0d0c0c',
+  },
+});
 
+const customPrimaryColors = new DefaultColors({
+  dark: {
+    50: '#c2ecb0',
+    100: '#93dd73',
+    200: '#70d246',
+    300: '#4fa729',
+    400: '#448f23',
+    500: '#38761d',
+    600: '#2c5d17',
+    700: '#214511',
+    800: '#152c0b',
+    900: '#091405',
+    A100: '#b6fa98',
+    A200: '#71f537',
+    A400: '#46ae18',
+    A700: '#408f1e',
+  },
+  light: {
+    50: '#fffffe',
+    100: '#daf5bc',
+    200: '#beed8c',
+    300: '#9ce34e',
+    400: '#8ddf33',
+    500: '#7ed321',
+    600: '#6eb91d',
+    700: '#5e9e19',
+    800: '#4f8415',
+    900: '#3f6910',
+    A100: '#fafff4',
+    A200: '#c9ff8e',
+    A400: '#98f235',
+    A700: '#8be429',
+  },
+});
 
 const customTheme = new Theme({
-  colors: new DefaultColors(colors),
+  palette: {
+    primary: {
+      colors: customPrimaryColors,
+    },
+    secondary: {
+      colors: customSecondaryColors,
+    },
+  },
 });
 
 const theme = { theme: customTheme };
