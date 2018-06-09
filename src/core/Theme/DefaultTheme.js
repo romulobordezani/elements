@@ -1,8 +1,10 @@
-import Colors from '../Colors/index';
+import DefaultColors from '../Colors/index';
 
 class DefaultTheme {
-  constructor() {
-    this.colors = new Colors();
+  constructor(theme) {
+    this.colors = new DefaultColors(theme.colors);
+
+    this.currentTheme = 'default';
 
     this.palette = {
       primary: {

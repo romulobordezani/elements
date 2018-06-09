@@ -2,7 +2,7 @@
   "name": "store-front-ui",
   "version": "1.0.0",
   "description": "store-front-ui, also called Elem, is a React based UI library containing basic visual elements used on Dafiti public pages.",
-  "main": "index.js",
+  "main": "src/exporter.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@bitbucket.org/dafiti/store-front-ui.git"
@@ -48,6 +48,7 @@
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
     "lodash": "^4.17.10",
+    "normalize.css": "^8.0.0",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
@@ -57,7 +58,9 @@
     "react": "^16.3.2",
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.3.2",
+    "react-test-renderer": "^16.3.2",
     "resolve": "1.6.0",
+    "resolve-url-loader": "^2.3.0",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.6.2",
@@ -117,6 +120,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "react-test-renderer": "^16.3.2"
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1"
   }
 }

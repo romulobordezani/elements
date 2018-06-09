@@ -16,6 +16,7 @@
       }
     }]
   },
+  "parser": "babel-eslint",
   "env": {
     "jest/globals": true
   }

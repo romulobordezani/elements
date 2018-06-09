@@ -1,5 +1,5 @@
-class Colors {
-  constructor() {
+class DefaultColors {
+  constructor(colors) {
     this.dark = {
       50: '#858585',
       100: '#5e5e5e',
@@ -17,6 +17,10 @@ class Colors {
       A700: '#1b3b31',
     };
 
+    if (colors && 'dark' in colors) {
+      Object.assign(this.dark, colors.dark);
+    }
+
     this.light = {
       50: '#ffffff',
       100: '#ffffff',
@@ -33,7 +37,11 @@ class Colors {
       A400: '#638574',
       A700: '#415e4e',
     };
+
+    if (colors && 'light' in colors) {
+      Object.assign(this.light, colors.light);
+    }
   }
 }
 
-export default Colors;
+export default DefaultColors;
