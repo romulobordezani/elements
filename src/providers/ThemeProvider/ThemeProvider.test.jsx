@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ThemeContext from './index';
+import { ThemeContext } from './index';
 import Theme from '../../core/Theme';
 import Button from '../../elements/Button';
 
 const theme = {
-  theme: new Theme(),
+  theme: new Theme({}),
 };
 
 describe('Theme', () => {

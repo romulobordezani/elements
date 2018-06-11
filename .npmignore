@@ -1,0 +1,12 @@
+.babelrc
+/src
+.editorconfig
+.eslintignore
+.eslintrc
+CODE_OF_CONDUCT.md
+license.md
+README-FROM-CREATE-REACT-APP.md
+/scripts
+/config
+/public
+/docs

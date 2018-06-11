@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../../providers/ThemeProvider/index';
+import { ThemeContext } from '../../../providers/ThemeProvider/index';
 
 function ThemeChangerButton(props) {
   return (
     <ThemeContext.Consumer>
       {({ theme, changeTheme }) => (
         <button
-          className="theme-changer__item"
-          style={{ backgroundColor: theme.currentTheme === props.themeName || theme.currentTheme === 'default' ? theme.palette.secondary.light : '#FFF' }}
+          className={`theme-changer__item ${theme.currentTheme === props.themeName ? 'theme-changer__item_state_selected' : ''}`}
+          style={{ backgroundColor: theme.currentTheme === props.themeName ? theme.palette.primary.light : '#FFF' }}
           onClick={() => changeTheme(props.themeName)}
         >
           {props.children}

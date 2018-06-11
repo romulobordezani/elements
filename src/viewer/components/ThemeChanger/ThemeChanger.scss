@@ -1,11 +1,20 @@
 .theme-changer{
 
   &__item{
-    max-width: 25%;
+    max-width: 20%;
     padding: 15px;
     margin: 2%;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    transition: background-color, max-width .3s ease-out;
+    outline: none;
+    cursor: pointer;
+    border-color: rgba(0,0,0,0.2);
+
+    &_state_selected{
+      max-width: 24%;
+    }
+
     img{
       width: 100%;
     }

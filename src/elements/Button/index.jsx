@@ -1,26 +1,28 @@
 import React from 'react';
+import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../providers/ThemeProvider';
+import { withTheme, Theme } from '../../providers/ThemeProvider';
+import styleOverride from './Button.jstyle';
 
-function Button(props) {
+function Button({ theme, classes, ...props }) {
   return (
-    <ThemeContext.Consumer>
-      {({ theme }) => (
-        <button
-          style={{
-            backgroundColor: theme.colors.dark.A100,
-            color: theme.colors.dark.A700,
-          }}
-        >
-          {props.children}
-        </button>
-      )}
-    </ThemeContext.Consumer>
+    <button className={`eButton ${classes.eButton}`} {...props} >
+      {props.children}
+    </button>
   );
 }
 
-Button.propTypes = {
-  children: PropTypes.string.isRequired,
+Button.defaultProps = {
+  palette: 'primary',
+  tone: 'light',
 };
 
-export default Button;
+Button.propTypes = {
+  children: PropTypes.string.isRequired,
+  theme: PropTypes.instanceOf(Theme).isRequired,
+  classes: PropTypes.shape({}).isRequired,
+  palette: PropTypes.string,
+  tone: PropTypes.string,
+};
+
+export default withTheme(injectSheet(styleOverride)(Button));

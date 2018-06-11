@@ -1,62 +1,63 @@
 import React from 'react';
-import './ViewerContainer.scss';
-import Button from '../../../elements/Button';
+import Markdown from 'react-markdown';
+import './ViewerContainer.css';
+import MdCodeBlock from './MdCodeBlock';
+
+// > Documents to be shown
+import TypographyDoc from '../../../providers/Typography/documents';
+import ButtonDocs from '../../../elements/Button/documents';
+import ThemeProviderDoc from '../../../providers/ThemeProvider/documents';
+import ColorsDoc from '../../../core/Colors/documents';
+
+const getStarted = require('../../../README.md');
+const getEnvolved = require('../../../CODE_OF_CONDUCT.md');
+const getTodo = require('../../../TODO.md');
 
 function ViewerContainer() {
   return (
     <div className="viewer-container">
-      <h1><a href="true" className="anchor" id="get_started">Get Started</a></h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Fusce a ex sit amet quam congue rutrum a ut nunc.
-        Etiam quam nisi, pharetra quis nibh non, facilisis maximus ipsum.
-        Praesent feugiat bibendum viverra.
-        Sed justo diam, viverra at enim non, interdum lobortis dolor.
-        Mauris eget ante eget ipsum vulputate efficitur.
-      </p>
 
-      <h1><a href="true" className="anchor" id="get_envolved">Get Envolved</a></h1>
-      <p>
-        Fusce a ex sit amet quam congue rutrum a ut nunc.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Etiam quam nisi, pharetra quis nibh non, facilisis maximus ipsum.
-        Praesent feugiat bibendum viverra.
-      </p>
+      <h1><a href="#get_started" className="anchor" id="get_started" style={{ visibility: 'hidden' }} >Get Started</a></h1>
+      <Markdown
+        source={getStarted}
+        escapeHtml={false}
+        renderers={{ code: MdCodeBlock }}
+      />
 
-      <h1>Components</h1>
+      <hr />
+
+      <h1><a href="#get_envolved" className="anchor" id="get_envolved">Get Envolved</a></h1>
+      <Markdown
+        source={getEnvolved}
+        escapeHtml={false}
+        renderers={{ code: MdCodeBlock }}
+      />
+
+      <h2>Get inspired:</h2>
+      <Markdown
+        source={getEnvolved}
+        escapeHtml={false}
+        renderers={{ code: getTodo }}
+      />
+
+      <hr />
+
+      <h1><a href="#providers" className="anchor" id="providers">Providers</a></h1>
       <div>
-        <h2><a href="true" className="anchor" id="button">Button</a></h2>
-        <p>
-          Sed justo diam, viverra at enim non, interdum lobortis dolor.
-          Mauris eget ante eget ipsum vulputate efficitur.
-        </p>
-        <Button>Button</Button>
+        <ThemeProviderDoc />
+        <hr />
+        <TypographyDoc />
+        <hr />
+        <ColorsDoc />
       </div>
 
-      <h1>Providers</h1>
-      <div>
-        <h2><a href="true" className="anchor" id="typography">Typography</a></h2>
-        <p>
-          Mauris eget ante eget ipsum vulputate efficitur.
-          Sed justo diam, viverra at enim non, interdum lobortis dolor.
-        </p>
-        <h2><a href="true" className="anchor" id="theme">Theme</a></h2>
-        <p>
-          Mauris eget ante eget ipsum vulputate efficitur.
-          Sed justo diam, viverra at enim non, interdum lobortis dolor.
-        </p>
-        <h2><a href="true" className="anchor" id="css_baseline">CssBaseline</a></h2>
-        <p>
-          Mauris eget ante eget ipsum vulputate efficitur.
-          Sed justo diam, viverra at enim non, interdum lobortis dolor.
-        </p>
-        <h2><a href="true" className="anchor" id="colors">Colors</a></h2>
-        <p>
-          Mauris eget ante eget ipsum vulputate efficitur.
-          Sed justo diam, viverra at enim non, interdum lobortis dolor.
-        </p>
-      </div>
+      <hr />
+
+      <h1><a href="#components" className="anchor" id="components">Components</a></h1>
+      <ButtonDocs />
+
     </div>
   );
 }
+
 export default ViewerContainer;

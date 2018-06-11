@@ -18,10 +18,22 @@
     display: inline-block;
     vertical-align: middle;
 
+    &:hover{
+      .header__logo-type__logo {
+        animation: Viewer-logo-spin infinite 1.5s linear;
+      }
+    }
+
     &__logo{
 
-      animation: Viewer-logo-spin infinite 20s linear;
+      animation: Viewer-logo-spin infinite 3.5s linear;
       float: left;
+      background-image: url("images/logo-elem.gif");
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      background-position: 0 1px;
+      background-repeat: no-repeat;
 
       &_size_small{
         height: 60px;
@@ -30,10 +42,12 @@
     }
 
     &__title {
-      font-size: 1.5em;
-      line-height: 60px;
       float: left;
-      margin-left: 15px;
+      margin: 15px 0 0 15px;
+      img{
+        max-width: 200px;
+        height: auto;
+      }
     }
 
   }

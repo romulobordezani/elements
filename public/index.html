@@ -19,7 +19,16 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Elem - Unit Interface Palette</title>
+    <link rel="stylesheet" href="%PUBLIC_URL%/font-loader.css">
+    <!--
+      Font import is part of the app itself, elem only points the font-family to an already loaded font file.
+    -->
+    <title>Elem - GFG Elements</title>
+
+    <!--  These imports are related to react-markdown -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/dracula-highlight.css">
+
   </head>
   <body>
     <noscript>
@@ -36,5 +45,9 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <!-- These imports are related to react-markdownt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+
   </body>
 </html>

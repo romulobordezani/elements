@@ -3,7 +3,7 @@ import ThemeChangerButton from './ThemeChangerButton';
 import dafitiLogoPico from './images/logo-dafiti.png';
 import kanuiLogoPico from './images/logo-kanui.png';
 import tricaeLogoPico from './images/logo-tricae.png';
-import './ThemeChanger.scss';
+import './ThemeChanger.css';
 
 function ThemeChangerContainer() {
   return (

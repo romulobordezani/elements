@@ -1,4 +1,4 @@
-import { merge } from '../../handlers/index';
+import { merge } from '../handlers/index';
 import DefaultTheme from './DefaultTheme';
 
 class Theme {

@@ -1,7 +1,8 @@
 .viewer-container{
+
   background: #FFFFFF;
   height: 100%;
-  width: 70%;
+  width: 80%;
   margin: 0 1%;
   display: inline-block;
   float: left;
@@ -9,11 +10,79 @@
   z-index: 800;
   position: absolute;
   right: 0;
+
+  img[src$='#dfg-logo'] {
+    max-width: 400px;
+  }
+
+  img[src$='#atomic-design'] {
+    max-width: 600px;
+  }
+
+  a.anchor { /* Hack to fix the fixed header extra space on top when anchoring */
+    padding-top: 120px;
+    margin-top: -120px;
+    display: inline-block;
+    outline: none;
+  }
+
+  .md-card{
+    margin: 10px 0 28px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+
+    &__title{
+      background-color: #282a36;
+      padding: 0.5em;
+      color: #FFF;
+    }
+
+    &__content{
+      padding: 0.9em;
+    }
+  }
+
+  hr{
+    margin: 30px 0;
+    display: inline-block;
+    width: 100%;
+  }
+
+  pre {
+    border: 1px solid #ccc;
+  }
+
+  blockquote {
+    color: #666;
+    margin: 0;
+    padding-left: 3em;
+    border-left: 0.5em #eee solid;
+  }
+
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    tr {
+      border-top: 1px solid #c6cbd1;
+      background: #fff;
+    }
+
+    th, td {
+      padding: 6px 13px;
+      border: 1px solid #dfe2e5;
+    }
+
+    th{
+      background: #333333;
+      color: #FFFFFF;
+    }
+
+    tr:nth-child(2n) {
+      background: #f6f8fa;
+    }
+
+  }
+
 }
 
-a.anchor { /* Hack to fix the fixed header extra space on top when anchoring */
-  padding-top: 120px;
-  margin-top: -120px;
-  display: inline-block;
-  outline: none;
-}
+

@@ -1,1 +1,0 @@
-// TODO - Agreement between teams about how to submit pull requests to this project
