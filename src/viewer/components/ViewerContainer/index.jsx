@@ -6,6 +6,7 @@ import MdCodeBlock from './MdCodeBlock';
 // > Documents to be shown
 import TypographyDoc from '../../../providers/Typography/documents';
 import ButtonDocs from '../../../elements/Button/documents';
+import MenuAuxDocs from '../../../elements/MenuAux/documents';
 import ThemeProviderDoc from '../../../providers/ThemeProvider/documents';
 import ColorsDoc from '../../../core/Colors/documents';
 
@@ -55,6 +56,8 @@ function ViewerContainer() {
 
       <h1><a href="#components" className="anchor" id="components">Components</a></h1>
       <ButtonDocs />
+      <hr />
+      <MenuAuxDocs />
 
     </div>
   );

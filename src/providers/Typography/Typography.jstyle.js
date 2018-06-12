@@ -51,16 +51,19 @@ const styleOveride = {
       marginBottom: '1em',
     },
     '& a': {
-      color: props => props.theme.palette[props.palette].dark,
       textDecoration: 'none',
-      transition: 'color .2s',
-      '&:hover': {
-        color: props => props.theme.palette[props.palette].light,
-      },
-      '&:active, &:focus, &visited': {
-        color: props => props.theme.palette[props.palette].light,
-      },
     },
+    // '& a': {
+    //   color: props => props.theme.palette[props.palette].dark,
+    //   textDecoration: 'none',
+    //   transition: 'color .2s',
+    //   '&:hover': {
+    //     color: props => props.theme.palette[props.palette].light,
+    //   },
+    //   '&:active, &:focus, &visited': {
+    //     color: props => props.theme.palette[props.palette].light,
+    //   },
+    // },
   },
 };
 
